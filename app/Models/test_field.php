@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class test_field extends Model
 {
     use HasFactory;
+    protected $fillable = ['test_id', 'FieldName', 'MinValue', 'MaxValue', 'Unit'];
+
+    public function test()
+    {
+        return $this->belongsTo(Test::class);
+    }
 }
