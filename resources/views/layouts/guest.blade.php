@@ -21,7 +21,7 @@
         <div>
             <a href="/">
                 {{-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> --}}
-                <img src="https://ouch-cdn2.icons8.com/Y5IKJHcLb0MJvJ_844hsKQOcl0zQn6rIewkjJKfPBt4/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9zdmcvNTY0/Lzg5MmUzN2E5LTA3/Y2YtNDY4Zi04ZmI0/LTI4OTA5Y2Y2N2Mx/NC5zdmc.png"
+                <img src="{{ asset('img/guest.png') }}"
                     class=" aspect-square h-56" alt="">
             </a>
         </div>
