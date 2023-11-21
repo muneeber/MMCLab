@@ -12,7 +12,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        //
+        return view('Tests.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class TestController extends Controller
      */
     public function create()
     {
-        //
+        return view('Tests.manage');
     }
 
     /**
