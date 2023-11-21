@@ -77,7 +77,7 @@
                     </li>
                     <li class="px-5">
                         <div class="flex flex-row items-center h-8">
-                            <div class="text-sm font-light tracking-wide text-gray-500">Reports</div>
+                            <div class="text-sm font-light tracking-wide text-gray-500">pots</div>
                         </div>
                     </li>
 
@@ -85,7 +85,7 @@
                         <a href="{{ route('test.create') }}" wire:navigate
                             class="relative flex flex-row hover:translate-x-2 transition-transform ease-in duration-200  items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
                             <span class="inline-flex justify-center items-center ml-4">
-
+ 
 
                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M15 9.783V4h1V2H8v2h1v5.783l-4.268 9.389a1.992 1.992 0 0 0 .14 1.911A1.99 1.99 0 0 0 6.553 22h10.895a1.99 1.99 0 0 0 1.681-.917c.37-.574.423-1.289.14-1.911L15 9.783zm-4.09.631c.06-.13.09-.271.09-.414V4h2v6c0 .143.03.284.09.414L15.177 15H8.825l2.085-4.586z"></path></svg>
                             </span>
