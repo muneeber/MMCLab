@@ -1,4 +1,25 @@
 <div class="">
+    @if ($success)
+    <div role="alert" class="alert absolute top-2   right-96 w-1/3 alert-success">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>{{ $success }}</span>
+    </div>
+@endif
+
+@if ($error)
+    <div role="alert" class="alert alert-error absolute top-2   right-96 w-1/3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>{{ $error }}</span>
+    </div>
+@endif
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <form id="myForm" class="m-6 bg-base-100  p-4 shadow-md" method="post" wire:submit.prevent='sub'>
 
@@ -10,7 +31,7 @@
         <div class="grid !grid-cols-4 !grid-rows-1 gap-2 gap-x-8">
             <div class="row-start-2  rounded  form-control  px-4 pb-3">
                 <label for="hi" class="label">Test Code :</label>
-                <input type="number " class="input input-bordered rounded-none   input-sm" placeholder="Test Code" 
+                <input type="number" class="input input-bordered rounded-none   input-sm" placeholder="Test Code" 
                     wire:model='code'>
                 @error('code')
                     <span class="bg-error text-white px-1">{{ $message }}</span>
@@ -26,9 +47,9 @@
             </div>
             <div class="row-start-2  rounded  form-control  px-4 pb-3">
                 <label for="hi" class="label">Price :</label>
-                <input type="number " class="input input-bordered rounded-none   input-sm" placeholder="Test Price " 
+                <input type="number" class="input input-bordered rounded-none   input-sm" placeholder="Test Price " 
                     wire:model='price'>
-                @error('name')
+                @error('price')
                     <span class="bg-error text-white px-1">{{ $message }}</span>
                 @enderror
             </div>

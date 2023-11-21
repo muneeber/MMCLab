@@ -8,13 +8,14 @@ use Livewire\Attributes\Validate;
 
 class ManageTests extends Component
 {
-    
+    public $error = '';
+    public $success = '';
     public $tests;
-    #[Validate('required')]
+    #[Validate('required|numeric')]
     public $code;
     #[Validate('required')]
     public $name;
-    #[Validate('required')]
+    #[Validate('required|numeric')]
     public $price;
     public $status;
     public function mount()
@@ -47,7 +48,7 @@ class ManageTests extends Component
             ]);
 
             if ($res) {
-                $this->status[] = ['Success' => 'Data Entered Successfully'];
+                $this->success ='Data Entered Successfully';
                 $this->tests();
                 
             }

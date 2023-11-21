@@ -58,7 +58,7 @@
             </div>
             <div class="row-start-2  rounded  form-control  px-4 pb-3">
                 <label for="hi" class="label">Min Value :</label>
-                <input type="number" wire:model='min' class="input input-bordered rounded-none   input-sm"
+                <input type="text" wire:model='min' oninput="this.value = this.value.replace(/[^0-9.]/g, '');" class="input input-bordered rounded-none   input-sm"
                     placeholder="Enter Minimum Value">
                 @error('min')
                     <span class="bg-error text-white px-1">{{ $message }}</span>
@@ -67,7 +67,7 @@
             </div>
             <div class="row-start-2  rounded  form-control  px-4 pb-3">
                 <label for="hi" class="label">Max Value :</label>
-                <input type="number" wire:model='max' class="input input-bordered rounded-none   input-sm"
+                <input type="text" wire:model='max' oninput="this.value = this.value.replace(/[^0-9.]/g, '');" class="input input-bordered rounded-none   input-sm"
                     placeholder="Enter Maximum Value">
                 @error('max')
                     <span class="bg-error text-white px-1">{{ $message }}</span>
@@ -108,7 +108,7 @@
                     <tr>
                         <th class="text-center   ">{{ $field->FieldName }} </th>
                         <td class="text-center   ">
-                            {{ number_format($field->MinValue, 0, '', '') }}&nbsp;---&nbsp;{{ number_format($field->MaxValue, 0, '', '') }}
+                            {{ $field->MinValue}}&nbsp;&nbsp;--&nbsp;&nbsp;{{ $field->MaxValue }}
                         </td>
                         <td class="text-center   ">{{ $field->Unit }}</td>
                         <td class="text-center"><button wire:click='del({{ $field->id }})' wire:confirm='Are You Sure You Want To Delete {{ $field->FieldName }} Field' class="btn  btn-sm bg-red-400 text-white">Delete</button></td>
