@@ -20,7 +20,7 @@
         <span>{{ $error }}</span>
     </div>
 @endif
-    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+  
     <form id="myForm" class="m-6 bg-base-100  p-4 shadow-md" method="post" wire:submit.prevent='sub'>
 
         <div class="grid !grid-cols-4  gap-2 gap-x-8">
